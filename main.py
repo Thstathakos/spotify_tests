@@ -16,8 +16,8 @@ songs = soup.find_all(name="h3", id="title-of-a-story", class_="lrv-u-font-size-
 song_names = []
 
 for i in songs:
-    test = (i.getText().strip("\n\t"))
-    song_names.append(test)
+    songs_raw_test = (i.getText().strip("\n\t"))
+    song_names.append(songs_raw_test)
 
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
